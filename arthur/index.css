@@ -12,7 +12,29 @@ html, body {
 * {
   font-family: "Raleway";
   box-sizing: border-box;
+  text-decoration: none;
+  color: white;
 }
+
+li:hover{
+  border: 2px blue;
+  color: white; 
+  animation-name: menu;
+  animation-duration: .1s;
+}
+
+@keyframes menu {
+  from {
+
+  }
+
+  to {
+  
+  }
+  
+}
+
+
 
 .top-nav {
   display: flex;
