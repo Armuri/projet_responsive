@@ -17,7 +17,21 @@ body {
 }
 
 /* ///////////..utility classes../////////// */
+@keyframes slideAnimation {
+  0% {
+      transform: translateX(-200%); /* Départ à droite de l'écran */
+  }
+  100% {
+      transform: translateX(0%); /* Arrêt à la position d'origine */
+  }
+}
 
+.image-glissante {
+  position: absolute;
+  animation: slideAnimation 5s ease-in-out;
+  max-width: 40%; /* Empêche l'image de déborder de son conteneur */
+  height: auto;
+}
 .container {
   max-width: 1200px;
   width: 90%;
@@ -177,6 +191,7 @@ body {
   margin: auto;
   transform: translate(-150%);
   animation: about-text-animation 1s ease-in-out forwards;
+  background-color: #fff;
 }
 
 @keyframes about-text-animation {
@@ -629,7 +644,9 @@ body {
   .img-container h3 {
     font-size: 1.5rem;
   }
-
+  .image-glissante {
+    display: none;
+}
   .img-container .btn {
     font-size: 0.7rem;
   }
@@ -639,4 +656,8 @@ body {
   .showcase-area {
     height: 50vmax;
   }
+  .image-glissante {
+    max-width: 10%; /* Réduit la largeur de l'image à 50% de son conteneur */
+    height: auto; /* Maintient le rapport hauteur/largeur de l'image */
+}
 }
