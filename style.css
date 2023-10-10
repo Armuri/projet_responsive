@@ -28,7 +28,7 @@ body {
 
 .image-glissante {
   position: absolute;
-  animation: slideAnimation 5s ease-in-out;
+  animation: slideAnimation 3s ease-in-out;
   max-width: 40%; /* Empêche l'image de déborder de son conteneur */
   height: auto;
 }
@@ -657,7 +657,7 @@ body {
     height: 50vmax;
   }
   .image-glissante {
-    max-width: 10%; /* Réduit la largeur de l'image à 50% de son conteneur */
+    max-width: 3%; /* Réduit la largeur de l'image à 50% de son conteneur */
     height: auto; /* Maintient le rapport hauteur/largeur de l'image */
 }
 }
