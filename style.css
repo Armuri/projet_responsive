@@ -6,12 +6,19 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  
 }
 
 .html {
   font-size: 62.5%;
 }
+.hide-after-slideAnimation2 {
+  display: none;
+}
 
+.image-glissante.animation2 {
+  animation: slideAnimation2 2s ease-in-out;
+}
 body {
   font-family: "Poppins", sans-serif;
 }
@@ -25,11 +32,21 @@ body {
       transform: translateX(0%); /* Arrêt à la position d'origine */
   }
 }
+@keyframes slideAnimation2 {
+  0% {
+      transform: translateX(0%);
+  }
+  100% {
+      transform: translateX(-200%);
+      display: none;
+  }
+}
+
 
 .image-glissante {
   position: absolute;
-  animation: slideAnimation 3s ease-in-out;
-  max-width: 40%; /* Empêche l'image de déborder de son conteneur */
+  animation: slideAnimation 5s ease-in-out;
+  max-width: 30%; /* Empêche l'image de déborder de son conteneur */
   height: auto;
 }
 .container {
@@ -593,7 +610,9 @@ body {
   html {
     font-size: 65%;
   }
-
+  .image-glissante {
+    display: none;
+  }
   .navbar .menu-items li{
       font-size: 1.6rem;
   }
@@ -645,19 +664,26 @@ body {
     font-size: 1.5rem;
   }
   .image-glissante {
-    display: none;
+    animation: slideAnimation2 2s ease-in-out;
 }
   .img-container .btn {
     font-size: 0.7rem;
   }
 }
+@media (min-width: 500px) and (max-width: 769px) {
+  .image-glissante{
+    display: none;
+  }
+}
+
 
 @media (orientation: landscape) and (max-height: 500px) {
   .showcase-area {
     height: 50vmax;
   }
   .image-glissante {
-    max-width: 3%; /* Réduit la largeur de l'image à 50% de son conteneur */
+    display: none;
+    max-width: 10%; /* Réduit la largeur de l'image à 50% de son conteneur */
     height: auto; /* Maintient le rapport hauteur/largeur de l'image */
 }
 }
